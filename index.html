@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pagina Inicial – Serviços Profissionais</title>
+  <meta name="description" content="Oferecemos serviços profissionais com qualidade e rapidez. Saiba mais sobre a nossa empresa e fale connosco." />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="icon" href="/favicon.ico" />
+  <style>
+    :root{--bg:#0b0f1a;--card:#0f172a;--muted:#94a3b8;--text:#e2e8f0;--brand:#0ea5e9;--brand-2:#22d3ee;--ring:0 0 0 3px rgba(14,165,233,.25);--radius:16px;--shadow:0 10px 30px rgba(2,6,23,.25)}
+    *{box-sizing:border-box} html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;background:linear-gradient(180deg,#0b0f1a 0%,#0b1220 100%);color:var(--text);scroll-behavior:smooth} a{color:var(--brand);text-decoration:none} a:hover{text-decoration:underline}
+    .container{width:100%;max-width:1120px;margin-inline:auto;padding:0 20px} header{position:sticky;top:0;z-index:50;background:rgba(11,15,26,.7);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid rgba(148,163,184,.15)} .nav{display:flex;align-items:center;justify-content:space-between;height:64px} .brand{display:flex;align-items:center;gap:12px;font-weight:700} .logo{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--brand-2));box-shadow:var(--shadow)} .menu{display:flex;gap:20px} .menu a{padding:10px 12px;border-radius:10px;color:var(--text)} .menu a:hover{background:rgba(148,163,184,.08)} .cta{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#001018;font-weight:700;box-shadow:var(--shadow);border:none;cursor:pointer} .cta:focus{outline:none;box-shadow:var(--ring)}
+    .hero{padding:80px 0 40px} .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center} .kicker{letter-spacing:.16em;text-transform:uppercase;color:var(--brand-2);font-weight:700;font-size:.85rem} h1{font-size:clamp(2rem,4vw,3rem);line-height:1.1;margin:.35em 0} .lead{color:var(--muted);font-size:1.05rem} .hero-card{background:linear-gradient(180deg,rgba(14,165,233,.1),rgba(34,211,238,.06));border:1px solid rgba(148,163,184,.18);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)} .badges{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px} .badge{border:1px solid rgba(148,163,184,.2);padding:8px 12px;border-radius:999px;color:#cbd5e1;background:rgba(148,163,184,.08)}
+    section{padding:60px 0} .section-title{font-size:1.6rem;margin:0 0 8px} .section-sub{color:var(--muted);margin:0 0 26px} .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px} .card{background:var(--card);border:1px solid rgba(148,163,184,.12);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)} .card h3{margin:0 0 6px} .card p{color:var(--muted);margin:0 0 14px} .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(14,165,233,.15);color:#a5f3fc;font-size:.8rem;border:1px solid rgba(14,165,233,.35)}
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:24px} .about .card ul{margin:0;padding-left:18px} .about .stat{font-size:1.8rem;font-weight:800} .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px} blockquote{margin:0;padding:0} blockquote p{margin:0 0 10px;color:#e5e7eb} cite{color:var(--muted);font-style:normal} .contact-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:24px} form{display:grid;gap:12px} input,textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(148,163,184,.22);background:#0b1220;color:var(--text)} textarea{min-height:120px;resize:vertical} input:focus,textarea:focus{outline:none;box-shadow:var(--ring);border-color:rgba(14,165,233,.5)} .contact-cards{display:grid;gap:12px} footer{border-top:1px solid rgba(148,163,184,.15);padding:24px 0;color:var(--muted)} @media(max-width:980px){.hero-grid,.grid,.about,.quotes,.contact-grid{grid-template-columns:1fr} header{position:static}}
+  </style>
+  <script defer>
+    function toggleContraste(){const root=document.documentElement;const isAlt=root.dataset.alt==='1';root.dataset.alt=isAlt?'0':'1';root.style.setProperty('--card',isAlt?'#0f172a':'#0b1220')}
+    function submitForm(e){e.preventDefault();const data=Object.fromEntries(new FormData(e.target).entries());const linkMail='mailto:contato@seudominio.co.mz?subject=Mensagem de '+encodeURIComponent(data.nome)+'&body='+encodeURIComponent(data.mensagem+'\nTelefone: '+(data.telefone||'')+'\nEmail: '+data.email);window.location.href=linkMail;const waLink='https://wa.me/258840000000?text='+encodeURIComponent('Mensagem de '+data.nome+': '+data.mensagem+' (Email: '+data.email+', Tel: '+(data.telefone||'')+')');window.open(waLink,'_blank');e.target.reset();alert('Obrigado, '+(data.nome||'')+'! A sua mensagem foi enviada.');}
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand"><div class="logo"></div><span>KAMPE-1912 MULTISERVICE</span></div>
+      <nav class="menu" aria-label="Navegação primária">
+        <a href="#servicos">Serviços</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#contactos">Contactos</a>
+        <button class="cta" onclick="toggleContraste()" aria-pressed="false">Contraste</button>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="kicker">Soluções sob medida</div>
+          <h1>Elevamos o seu negócio com <span style="background:linear-gradient(135deg,var(--brand),var(--brand-2));-webkit-background-clip:text;background-clip:text;color:transparent">serviços profissionais</span></h1>
+          <p class="lead">Atendimento rápido, prazos cumpridos e suporte próximo. Fazemos desde a consultoria à execução completa.</p>
+          <div class="badges">
+            <span class="badge">+5 anos de experiência</span>
+            <span class="badge">Atendimento em todo Moçambique</span>
+            <span class="badge">Orçamento gratuito</span>
+          </div>
+          <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap">
+            <a class="cta" href="#contactos">Pedir Orçamento</a>
+            <a class="cta" href="https://wa.me/258848303476" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+        <div>
+          <div class="hero-card">
+            <strong style="display:block;margin-bottom:8px">Nossos Diferenciais</strong>
+            <ul style="margin:0;padding-left:18px;color:var(--muted)">
+              <li>Equipe especializada e certificada</li>
+              <li>Processo transparente, do briefing à entrega</li>
+              <li>Garantia de satisfação e suporte pós-venda</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicos">
+      <div class="container">
+        <h2 class="section-title">Serviços</h2>
+        <p class="section-sub">Escolha o pacote ideal ou peça um plano personalizado.</p>
+        <div class="grid">
+          <article class="card"><h3>Consultoria & Planeamento</h3><p>Diagnóstico do seu negócio e definição de estratégia.</p><span class="pill">A partir de 5.000 MZN</span></article>
+          <article class="card"><h3>Implementação Técnica</h3><p>Execução ponta‑a‑ponta com padrões de qualidade.</p><span class="pill">Sob orçamento</span></article>
+          <article class="card"><h3>Suporte & Manutenção</h3><p>Monitorização, atualizações e suporte contínuo.</p><span class="pill">Planos mensais</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre">
+      <div class="container">
+        <h2 class="section-title">Sobre a Empresa</h2>
+        <p class="section-sub">Compromisso com resultados e relacionamento de longo prazo.</p>
+        <div class="about">
+          <div class="card">
+            <h3>Quem Somos</h3>
+            <p class="lead">Somos uma equipa apaixonada por resolver problemas reais, unindo técnica e empatia.</p>
+            <ul>
+              <li>Fundada em 2020, com atuação nacional</li>
+              <li>Parcerias com fornecedores de referência</li>
+              <li>Processos ágeis e foco no cliente</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Alguns Números</h3>
+            <p class="stat">+120</p>
+            <p class="lead">projectos entregues</p>
+            <p class="stat">98%</p>
+            <p class="lead">clientes satisfeitos</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <div class="container">
+        <h2 class="section-title">Portfólio</h2>
+        <p class="section-sub">Alguns dos nossos trabalhos realizados.</p>
+        <div class="grid">
+          <div class="card"><h3>Projeto 1</h3><p>Descrição breve do projeto realizado com resultados obtidos.</p></div>
+          <div class="card"><h3>Projeto 2</h3><p>Descrição breve do projeto realizado com resultados obtidos.</p></div>
+          <div class="card"><h3>Projeto 3</h3><p>Descrição breve do projeto realizado com resultados obtidos.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contactos">
+      <div class="container">
+        <h2 class="section-title">Fale Connosco</h2>
+        <p class="section-sub">Orçamentos sem compromisso. Resposta rápida.</p>
+        <div class="contact-grid">
+          <div class="card">
+            <form onsubmit="submitForm(event)">
+              <label><span>Nome</span><input name="nome" placeholder="O seu nome" required /></label>
+              <label><span>Email</span><input type="email" name="email" placeholder="seu email.com" required /></label>
+              <label><span>Telefone (opcional)</span><input name="telefone" placeholder="+258…" /></label>
+              <label><span>Mensagem</span><textarea name="mensagem" placeholder="Como podemos ajudar?" required></textarea></label>
+              <div style="display:flex;gap:12px;flex-wrap:wrap">
+                <button class="cta" type="submit">Enviar Mensagem</button>
+                <a class="cta" href="mailto:tomasmanuelcharles8@gmail.com">Email</a>
+              </div>
+            </form>
+          </div>
+          <div class="contact-cards">
+            <div class="card">
+              <h3>Contactos Directos</h3>
+              <p><strong>Telefone:</strong> <a href="tel:+258848303476">+258848303476</a></p>
+              <p><strong>WhatsApp:</strong> <a href="https://wa.me/258848303476" target="_blank" rel="noopener">Falar no WhatsApp</a></p>
+              <p><strong>Email:</strong> <a href="mailto:tomasmanuelcharles8@gmail.com">tomasmanuelcharles8@gmail.com</a></p>
+              <p><strong>Endereço:</strong> Av. Acordos De Lusaka , 123 – Maputo</p>
+            </div>
+            <div class="card">
+              <h3>Localização</h3>
+              <p class="lead">Atendemos presencialmente no Grande Maputo e remotamente em todo o país.</p>
+              <div style="position:relative;padding-top:56%;border-radius:12px;overflow:hidden;border:1px solid rgba(148,163,184,.2)">
+                <iframe title="Mapa" src="https://maps.google.com/maps?q=Maputo&t=&z=13&ie=UTF8&iwloc=&output=embed" style="position:absolute;inset:0;border:0;width:100%;height:100%" loading="lazy"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <div>© <span id="ano"></span> KAMPE-1912 MULTISERVICE. Todos os direitos reservados.</div>
+      <div style="display:flex;gap:14px">
+        <a href="#servicos">Serviços</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#contactos">Contactos</a>
+      </div>
+    </div>
+  </footer>
+  <script>document.getElementById('ano').textContent = new Date().getFullYear();</script>
+</body>
+</html>
