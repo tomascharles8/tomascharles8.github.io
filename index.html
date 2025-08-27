@@ -104,7 +104,116 @@
       </div>
     </section>
 
+     <title>Catálogo de Produtos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #000714;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .catalogo {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .produto {
+      background: #012342;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 15px;
+      transition: transform 0.2s;
+    }
+    .produto:hover {
+      transform: scale(1.05);
+    }
+    .produto img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .nome {
+      margin: 10px 0 5px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .preco {
+      font-size: 16px;
+      color: green;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .botao-comprar {
+      display: inline-block;
+      background: #28a745;
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: bold;
+      transition: background 0.3s;
+      cursor: pointer;
+    }
+    .botao-comprar:hover {
+      background: #218838;
+    }
+  </style>
+</head>
+<body>
 
+<h1>Catálogo de Produtos</h1>
+
+<div class="catalogo">
+
+  <div class="produto">
+    <img src="ropa1.jpg" alt="Camiseta Estilosa">
+    <div class="nome">Camiseta Estilosa</div>
+    <div class="preco">Mt 1.200,00</div>
+    <button class="botao-comprar" data-link="produto-camiseta.html">Comprar</button>
+  </div>
+
+  <div class="produto">
+    <img src="calca1.jpg" alt="Calça Jeans">
+    <div class="nome">Calça Jeans</div>
+    <div class="preco">MT 1.300,00</div>
+    <button class="botao-comprar" data-link="produto-calca.html">Comprar</button>
+  </div>
+
+  <div class="produto">
+    <img src="tenis1.jpg" alt="Tênis Confortável">
+    <div class="nome">Tênis Confortável</div>
+    <div class="preco">MT 2.350,00</div>
+    <button class="botao-comprar" data-link="produto-tenis.html">Comprar</button>
+  </div>
+
+</div>
+
+<script>
+  const numeroWhatsApp = "258848303476";
+  const botoes = document.querySelectorAll(".botao-comprar");
+
+  botoes.forEach(botao => {
+    botao.addEventListener("click", function() {
+      const produto = this.parentElement.querySelector(".nome").innerText;
+      const preco = this.parentElement.querySelector(".preco").innerText;
+      const linkProduto = this.getAttribute("data-link");
+
+      const mensagem = `Olá, quero comprar o produto: ${produto} - Preço: ${preco} - Confira aqui: https://seudominio.com/${linkProduto}`;
+      const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
+      window.open(url, "_blank");
+    });
+  });
+</script>
+
+</body>
+</html>
     <section id="sobre">
       <div class="container">
         <h2 class="section-title">Sobre a Empresa</h2>
