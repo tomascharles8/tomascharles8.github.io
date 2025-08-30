@@ -259,16 +259,44 @@
 
 </div>
 
-<h2>Vídeo incorporado do YouTube</h2>
-  <iframe width="600" height="340" 
-          src="https://www.youtube.com/embed/DO5sa6iedv0?si=t_1LQybTFFJ8HJ93" 
-          title="Vídeo do YouTube"
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowfullscreen>
-  </iframe>
-
+ <style>
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+    .video-wrapper iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Vídeo Responsivo</h1>
+    <div class="video-wrapper">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/DO5sa6iedv0?rel=0"
+        title="Rimador Ambulante – Vídeo Oficial"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
 </body>
+
 
 <script>
   const numeroWhatsApp = "258848303476";
