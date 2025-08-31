@@ -3,7 +3,7 @@
 
   <!-- Página inicial -->
   <url>
-    <loc>https://k12-moda.com/</loc>
+    <loc>https://tomascharles8.github.io.com/</loc>
     <lastmod>2025-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -11,7 +11,7 @@
 
   <!-- Página de serviços / catálogo -->
   <url>
-    <loc>https://k12-moda.com/catalogo</loc>
+    <loc>https://tomascharles8.github.io/catalogo</loc>
     <lastmod>2025-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -19,7 +19,7 @@
 
   <!-- Página sobre a empresa -->
   <url>
-    <loc>https://k12-moda.com/sobre</loc>
+    <loc>https://tomascharles8.github.io/sobre</loc>
     <lastmod>2025-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -27,7 +27,7 @@
 
   <!-- Página de contato -->
   <url>
-    <loc>https://k12-moda.com/contato</loc>
+    <loc>https://tomascharles8.github.io/contato</loc>
     <lastmod>2025-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
