@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap:
+ https://tomascharles8.github.io/sitemap.xml
