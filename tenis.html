@@ -1,16 +1,58 @@
-<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="pt">
 <head>
-  <meta charset="UTF-8">
-  <title>Tênis Confortável</title>
-  <meta property="og:title" content="Tênis Confortável" />
-  <meta property="og:description" content="Preço: Mt 2.350,00" />
-  <meta property="og:image" content="tenis1.jpg" />
-  <meta property="og:url" content="https://tomascharles8.github.io/" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tênis Confortável | KAMPE-12</title>
+  <meta name="description" content="Tênis Confortável da KAMPE-12 - design leve e confortável para o seu dia a dia." />
+  <link rel="icon" type="image/png" href="logo.jpg" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>Tênis Confortável</h1>
-  <img src="tenis1.jpg" alt="Tênis Confortável">
-  <p>Preço: MT 2.350,00</p>
+  <header class="page-header">
+    <div class="container navbar">
+      <div class="branding">
+        <div class="logo" aria-hidden="true"></div>
+        <h1>KAMPE-12</h1>
+      </div>
+      <nav class="navigation" aria-label="Menu principal">
+        <a href="index.html#portfolio">Produtos</a>
+        <a href="index.html#contactos">Contactos</a>
+        <a class="button-primary" href="https://wa.me/258848303476" target="_blank" rel="noopener">WhatsApp</a>
+        <button class="cta" type="button" onclick="toggleContraste()" aria-pressed="false">Contraste</button>
+      </nav>
+    </div>
+  </header>
+  <main class="section">
+    <div class="container hero-grid">
+      <div>
+        <img src="tenis1.jpg" alt="Tênis Confortável" />
+      </div>
+      <div class="hero-card">
+        <h1>Tênis Confortável</h1>
+        <p class="lead">Tênis leve e resistente, perfeito para passeios, treino ou para completar um look casual.</p>
+        <span class="pill">Mt 2.350,00</span>
+        <ul style="margin:1rem 0 0 1.25rem; color:var(--muted);">
+          <li>Solado antiderrapante</li>
+          <li>Design urbano e confortável</li>
+          <li>Pronto para o dia a dia</li>
+        </ul>
+        <div style="margin-top:1.5rem; display:flex; gap:1rem; flex-wrap:wrap;">
+          <a class="cta" href="https://wa.me/258848303476?text=Ol%C3%A1%2C+quero+comprar+o+T%C3%AAnis+Confort%C3%A1vel" target="_blank" rel="noopener">Comprar no WhatsApp</a>
+          <a class="button-primary" href="index.html#portfolio">Ver outros produtos</a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap;">
+      <div>© <span id="year"></span> KAMPE-12. Todos os direitos reservados.</div>
+      <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+        <a href="index.html#portfolio">Produtos</a>
+        <a href="index.html#contactos">Contactos</a>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js" defer></script>
 </body>
 </html>
