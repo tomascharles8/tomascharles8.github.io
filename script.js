@@ -2,6 +2,36 @@
   document.body.classList.toggle('contrast');
 }
 
+function toggleMenu() {
+  const nav = document.querySelector('.navigation');
+  const button = document.querySelector('.nav-toggle');
+  if (!nav) {
+    return;
+  }
+
+  const isOpen = nav.classList.toggle('active');
+  nav.setAttribute('aria-expanded', isOpen.toString());
+  if (button) {
+    button.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+    button.setAttribute('aria-pressed', isOpen.toString());
+  }
+}
+
+function closeMenu() {
+  const nav = document.querySelector('.navigation');
+  const button = document.querySelector('.nav-toggle');
+  if (!nav || !nav.classList.contains('active')) {
+    return;
+  }
+
+  nav.classList.remove('active');
+  nav.setAttribute('aria-expanded', 'false');
+  if (button) {
+    button.setAttribute('aria-label', 'Abrir menu');
+    button.setAttribute('aria-pressed', 'false');
+  }
+}
+
 function submitForm(event) {
   event.preventDefault();
   const form = event.currentTarget;
@@ -30,6 +60,9 @@ function initContactForm() {
   }
 
   form.addEventListener('submit', submitForm);
+  document.querySelectorAll('.navigation a').forEach((link) => {
+    link.addEventListener('click', closeMenu);
+  });
 }
 
 function setFooterYear() {
